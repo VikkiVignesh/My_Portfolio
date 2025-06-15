@@ -4,7 +4,7 @@ import ExpInfo from "./ExpInfo"
 const ExpTopLeft = () => {
   return (
     <div className='flex flex-col gap-6 w-[300px]'>
-       <p className='text-orange font-bold uppercase text-3xl  text-center font-special'>Since 2023</p>
+       <p className='text-orange font-bold uppercase text-3xl  text-center font-special'>Since 2024</p>
        <div className=' flex justify-center items-center gap-4'>
         <ExpInfo number={1.5} text={"years"}/>
         <p className='font-bold text-4xl text-lightBrown'>-</p>
