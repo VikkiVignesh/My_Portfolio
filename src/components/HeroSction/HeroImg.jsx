@@ -12,7 +12,7 @@ const HeroImg = () => {
       className='w-full sm:w-auto flex items-center justify-center'
     >
       <img
-        className='w-[80%] max-w-[300px] sm:max-w-[250px] rounded-lg border border-cyan object-cover aspect-square'
+        className='w-3/4 sm:w-[300px] max-w-[100%] rounded-lg border border-cyan object-cover'
         src="/images/vikki.jpg"
         alt="Profile"
       />
