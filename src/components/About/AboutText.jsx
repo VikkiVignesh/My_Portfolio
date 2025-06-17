@@ -12,11 +12,13 @@ const AboutText = () => {
         apply my skills and contribute to the company.
       </p>
 
-      <button
-        className='border mt-6 border-orange rounded-full py-2 px-6 flex items-center text-white hover:bg-origin-border transition-all duration-500 cursor-pointer text-sm sm:text-base hover:text-cyan hover:scale-95 hover:shadow-md md:self-start'
-      >
-        My Projects
-      </button>
+       <Link to={link.section}
+        smooth={true}
+        spy={true}
+        duration={500}
+        offset={-130}
+        className='border mt-6 border-orange rounded-full py-2 px-6 flex items-center text-white hover:bg-origin-border transition-all duration-500 cursor-pointer text-sm sm:text-base hover:text-cyan hover:scale-95 hover:shadow-md md:self-start'>My Projects</Link>
+      
     </div>
   )
 }
