@@ -19,7 +19,7 @@ const NavbarMain = () => {
           <NavbarLogo />
 
           {/* Desktop Nav + Button */}
-          <div className="hidden lg:flex items-center gap-50">
+          <div className="hidden lg:flex items-center gap-40">
             <NavBarLinks />
             <NavbarBtns />
           </div>

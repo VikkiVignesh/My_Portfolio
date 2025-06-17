@@ -15,7 +15,7 @@ const NavBarLinks = ({ isMobile }) => {
       className={`${
         isMobile
           ? 'flex flex-col items-start gap-3'
-          : 'flex flex-row gap-6'
+          : 'flex flex-row gap-4'
       } text-white font-bold`}
     >
       {links.map((link, index) => (
