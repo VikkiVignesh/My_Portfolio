@@ -1,35 +1,46 @@
-import React ,{useState}from 'react'
-import NavbarLogo from './NavbarLogo'
-import NavBarLinks from './NavBarLinks'
-import NavbarBtns from './NavbarBtns'
+import React, { useState } from 'react';
+import NavbarLogo from './NavbarLogo';
+import NavBarLinks from './NavBarLinks';
+import NavbarBtns from './NavbarBtns';
 import { GiHamburgerMenu } from "react-icons/gi";
 
-
 const NavbarMain = () => {
-  const [menuOpen,SetmenuOpen]=useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu=()=>
-  {
-    SetmenuOpen(!menuOpen);
-  }
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav className='max-w-[1300px] mx-auto px-4 -translate-x-[50%] w-full fixed left-[50%] z-20 flex gap-4 mt-2' >
-        <div className='flex justify-between w-full max-w-[1200px] mx-auto bg-black items-center p-6 rounded-r-full  rounded-l-full border-[0.5px] border-orange' >
-            <NavbarLogo/>
-           <div className={`${menuOpen? "sm:block" :"sm:hidden"} lg:block`}>
-            <NavBarLinks/>
-            </div>
-            <NavbarBtns/>
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black border-b border-orange">
+      <div className="max-w-[1200px] mx-auto flex justify-evenly gap-20 items-center px-4 py-3">
+        {/* Logo */}
+        <NavbarLogo />
+
+        {/* Desktop Nav + Button */}
+        <div className="hidden lg:flex items-center gap-8">
+          <NavBarLinks />
+          <NavbarBtns />
         </div>
 
-        <div className='flex lg:hidden sm:block p-6 bg-black items-center justify-center rounded-full border-[0.5px]
-        border-orange' >
-          <button onClick={toggleMenu} className='text-2xl p-3 border border-orange rounded-full text-white'>
-             <GiHamburgerMenu/>
-          </button>
+        {/* Hamburger for mobile */}
+        <button
+          onClick={toggleMenu}
+          className="lg:hidden text-2xl p-2 border border-orange rounded-full text-white"
+        >
+          <GiHamburgerMenu />
+        </button>
+      </div>
+
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div className="lg:hidden bg-black flex flex-col items-start gap-4 py-4 px-6 border-t border-orange">
+          <NavBarLinks isMobile />
+          <NavbarBtns />
         </div>
+      )}
     </nav>
-  )
-}
+  );
+};
 
-export default NavbarMain
+export default NavbarMain;
