@@ -11,21 +11,21 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 px-4">
-      {/* Name and separator */}
-      <div className="text-center mb-6">
+    <footer className="bg-black text-white py-12 px-6">
+      {/* Name and Line */}
+      <div className="text-center mb-8">
         <h2 className="text-2xl font-bold">Vignesh</h2>
-        <div className="w-24 h-1 bg-cyan-500 mx-auto mt-2"></div>
+        <div className="w-24 h-1 bg-cyan-500 mx-auto mt-2 rounded-full"></div>
       </div>
 
-      {/* Navigation Links */}
+      {/* Nav Links */}
       <nav className="mb-6">
         <ul className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
           {links.map((link, index) => (
             <li key={index}>
               <a
                 href={`#${link.section}`}
-                className="hover:text-cyan-400 transition-all duration-300"
+                className="hover:text-cyan-400 transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -35,26 +35,28 @@ const Footer = () => {
       </nav>
 
       {/* Social Icons */}
-      <div className="flex justify-center gap-6 text-xl">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-all duration-300">
+      <div className="flex justify-center gap-6 text-2xl mt-4">
+        <a href="https://github.com/VikkiVignesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-cyan-400 transition-colors duration-300">
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-all duration-300">
+        <a href="https://linkedin.com/in/vigneshp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-cyan-400 transition-colors duration-300">
           <FaLinkedin />
         </a>
-        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-all duration-300">
+        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-cyan-400 transition-colors duration-300">
           <FaTwitter />
         </a>
-        <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-all duration-300">
+        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-cyan-400 transition-colors duration-300">
           <FaInstagram />
         </a>
-        <a href="mailto:youremail@example.com" className="hover:text-cyan-400 transition-all duration-300">
+        <a href="mailto:your.email@example.com" aria-label="Email" className="hover:text-cyan-400 transition-colors duration-300">
           <FaEnvelope />
         </a>
       </div>
 
       {/* Copyright */}
-      <p className="text-center text-sm text-gray-500 mt-6">&copy; {new Date().getFullYear()} Vignesh. All rights reserved.</p>
+      <p className="text-center text-sm text-gray-500 mt-8">
+        &copy; {new Date().getFullYear()} Vignesh. All rights reserved.
+      </p>
     </footer>
   );
 };

@@ -27,7 +27,7 @@ const AllExperience = () => {
     <div
       className={`flex ${
         isSingle ? 'justify-center' : 'justify-between'
-      } items-center flex-wrap gap-8`}
+      } items-center flex-wrap gap-8 w-full max-w-[1200px] mx-auto px-4 sm:px-6`}
     >
       {Exper.map((exp, index) => (
         <React.Fragment key={index}>
@@ -39,7 +39,7 @@ const AllExperience = () => {
               whileInView='show'
               viewport={{ once: false, amount: 0 }}
             >
-              <FaArrowRight className='text-6xl text-orange lg:block sm:hidden' />
+              <FaArrowRight className='text-4xl md:text-5xl lg:text-6xl text-orange hidden sm:block' />
             </motion.div>
           )}
         </React.Fragment>

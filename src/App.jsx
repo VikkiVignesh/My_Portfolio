@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 
 function App() {
  return (
-  <main className='font-body'>
+  <main role="main" className='font-body'>
     <NavbarMain/>
     <Hero/>
     <SubHero/>
