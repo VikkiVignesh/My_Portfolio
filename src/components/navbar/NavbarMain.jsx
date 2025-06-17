@@ -12,29 +12,31 @@ const NavbarMain = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black border-b border-orange">
-      <div className="max-w-[1200px] mx-auto flex justify-evenly gap-20 items-center px-4 py-3">
-        {/* Logo */}
-        <NavbarLogo />
+    <nav className="fixed top-4 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1200px] mx-auto bg-black border border-orange rounded-full px-6 py-3 shadow-md">
+        <div className="flex items-center justify-between gap-10">
+          {/* Logo */}
+          <NavbarLogo />
 
-        {/* Desktop Nav + Button */}
-        <div className="hidden lg:flex items-center gap-8">
-          <NavBarLinks />
-          <NavbarBtns />
+          {/* Desktop Nav + Button */}
+          <div className="hidden lg:flex items-center gap-50">
+            <NavBarLinks />
+            <NavbarBtns />
+          </div>
+
+          {/* Hamburger Icon for Mobile */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden text-2xl p-2 border border-orange rounded-full text-white"
+          >
+            <GiHamburgerMenu />
+          </button>
         </div>
-
-        {/* Hamburger for mobile */}
-        <button
-          onClick={toggleMenu}
-          className="lg:hidden text-2xl p-2 border border-orange rounded-full text-white"
-        >
-          <GiHamburgerMenu />
-        </button>
       </div>
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="lg:hidden bg-black flex flex-col items-start gap-4 py-4 px-6 border-t border-orange">
+        <div className="lg:hidden mt-2 bg-black rounded-xl flex flex-col items-start gap-4 py-4 px-6 border-t border-orange max-w-[1200px] mx-auto">
           <NavBarLinks isMobile />
           <NavbarBtns />
         </div>
