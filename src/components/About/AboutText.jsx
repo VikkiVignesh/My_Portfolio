@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-scroll'
 
 const AboutText = () => {
   return (
@@ -12,7 +13,7 @@ const AboutText = () => {
         apply my skills and contribute to the company.
       </p>
 
-       <Link to={link.section}
+       <Link to='projects'
         smooth={true}
         spy={true}
         duration={500}
